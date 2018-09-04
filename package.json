@@ -24,6 +24,7 @@
   "bugs": {
     "url": "https://github.com/pspgbhu/git-cache.git"
   },
+  "types": "types/index.d.ts",
   "homepage": "https://github.com/pspgbhu/git-cache#readme",
   "dependencies": {
     "download": "^7.1.0",
