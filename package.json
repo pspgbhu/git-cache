@@ -6,7 +6,7 @@
   "scripts": {
     "test": "DEBUG=git-cache jest",
     "preversion": "npm test",
-    "postversion": "git push"
+    "postversion": "npm publish && git push"
   },
   "repository": {
     "type": "git",
