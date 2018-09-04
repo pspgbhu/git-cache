@@ -1,10 +1,12 @@
 {
   "name": "git-cache",
-  "version": "0.1.0",
-  "description": "Only the first time it have to git clone and cache those, it would git pull the cache repository in the next times",
+  "version": "1.0.0",
+  "description": "It is useful for creating a template by git clone. It saved the template to local cached folder to avoid run `git clone` every time creating template. It could significantly improve the speed of installing template.",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=git-cache jest"
+    "test": "DEBUG=git-cache jest",
+    "preversion": "npm test",
+    "postversion": "git push"
   },
   "repository": {
     "type": "git",
@@ -12,7 +14,10 @@
   },
   "keywords": [
     "install",
-    "template"
+    "template",
+    "cache",
+    "git",
+    "clone"
   ],
   "author": "pspgbhu <brotherchun001@gmail.com>",
   "license": "MIT",
