@@ -1,6 +1,6 @@
 {
   "name": "git-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It is useful for creating a template by git clone. It saved the template to local cached folder to avoid run `git clone` every time creating template. It could significantly improve the speed of installing template.",
   "main": "index.js",
   "scripts": {
