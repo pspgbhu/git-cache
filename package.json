@@ -1,0 +1,28 @@
+{
+  "name": "git-cache",
+  "version": "0.1.0",
+  "description": "Only the first time it have to git clone and cache those, it would git pull the cache repository in the next times",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=git-cache jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pspgbhu/git-cache.git"
+  },
+  "keywords": [
+    "install",
+    "template"
+  ],
+  "author": "pspgbhu <brotherchun001@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pspgbhu/git-cache.git"
+  },
+  "homepage": "https://github.com/pspgbhu/git-cache#readme",
+  "dependencies": {
+    "download": "^7.1.0",
+    "fs-extra": "^7.0.0",
+    "jest": "^23.5.0"
+  }
+}
