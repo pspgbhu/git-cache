@@ -45,6 +45,14 @@ describe('testing git-cache', () => {
     });
   });
 
+  test('it should filter the .git folder', done => {
+    if (fs.existsSync(path.resolve(__dirname, target, '.git'))) {
+      throw new Error('.git folder is not be filtered');
+    } else {
+      done();
+    }
+  });
+
   afterAll(() => {
     fs.remove(path.resolve(__dirname, target));
     fs.remove(path.resolve(__dirname, zipTarget));

@@ -88,7 +88,7 @@ module.exports = function create(opts) {
  * filter .git foler
  */
 function filterGit(src) {
-  return true;
+  return !/(\\|\/)\.git\b/.test(src);
 }
 
 /**
