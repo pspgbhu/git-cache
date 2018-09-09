@@ -1,31 +1,33 @@
 {
-  "name": "git-cache",
-  "version": "1.0.1",
+  "name": "template-down",
+  "version": "1.0.0",
   "description": "It is useful for creating a template by git clone. It saved the template to local cached folder to avoid run `git clone` every time creating template. It could significantly improve the speed of installing template.",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=git-cache jest",
+    "test": "DEBUG=template-down jest",
     "preversion": "npm test",
     "postversion": "npm publish && git push"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pspgbhu/git-cache.git"
+    "url": "git+https://github.com/pspgbhu/template-down.git"
   },
   "keywords": [
     "install",
     "template",
     "cache",
     "git",
-    "clone"
+    "clone",
+    "download",
+    "zip"
   ],
   "author": "pspgbhu <brotherchun001@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pspgbhu/git-cache.git"
+    "url": "https://github.com/pspgbhu/template-down.git"
   },
   "types": "types/index.d.ts",
-  "homepage": "https://github.com/pspgbhu/git-cache#readme",
+  "homepage": "https://github.com/pspgbhu/template-down#readme",
   "dependencies": {
     "download": "^7.1.0",
     "fs-extra": "^7.0.0",

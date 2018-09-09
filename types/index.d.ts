@@ -1,4 +1,4 @@
-export enum EGitCacheWay {
+export enum ETemplateDown {
   git = 'git',
   zip = 'zip',
 }
@@ -8,7 +8,7 @@ export enum EGitCacheWay {
  * @param opts.git Git repository url. If it is a github repo, only
  * type '<username>/<repo>'.
  * @param opts.target The folder of generating to.
- * @param opts.cacheDir Default `~/.git-cache/${name}`, the folder
+ * @param opts.cacheDir Default `~/.template-down/${name}`, the folder
  * @param opts.branch Default 'master'. Git branch.
  * @param opts.way The way of install template, only 'git' or 'zip'.
  * to keep cache.
@@ -22,7 +22,7 @@ declare function gitCache(opts: {
   cacheDir?: string;
   branch?: string;
   way?: string;
-  zip?: EGitCacheWay;
+  zip?: ETemplateDown;
   offline?: boolean;
 }): Promise<void>;
 

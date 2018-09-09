@@ -4,7 +4,7 @@ const gitCache = require('./index');
 
 jest.setTimeout(1000 * 30);
 
-describe('testing git-cache', () => {
+describe('testing template-down', () => {
 
   const git = 'pspgbhu/eslint-g';
   const target = '__target__';

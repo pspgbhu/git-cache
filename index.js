@@ -4,16 +4,18 @@ const path = require('path');
 const { promisify } = require('util');
 const fs = require('fs-extra');
 const download = require('download')
-const debug = require('debug')('git-cache');
+const debug = require('debug')('template-down');
 
 const exec = promisify(child_process.exec);
 
 /**
+ * @todo add options.filter
+ *
  * @param {object} opts options
  * @param {string} opts.git Git repository url. If it is a github repo, only
  * type '<username>/<repo>'.
  * @param {string} opts.target The folder of generating to.
- * @param {string} opts.cacheDir? Default `~/.git-cache/${name}`, the folder
+ * @param {string} opts.cacheDir? Default `~/.template-down/${name}`, the folder
  * @param {string} opts.branch? Default 'master'. Git branch.
  * @param {string} opts.way? The way of install template, only 'git' or 'zip'.
  * to keep cache.
@@ -21,7 +23,7 @@ const exec = promisify(child_process.exec);
  * repository, this option is unnecessary.
  * @param {boolean} opts.offline? use cached files, and don't update.
  */
-module.exports = function create(opts) {
+module.exports = function template(opts) {
   const {
     git,
     zip,
@@ -36,7 +38,7 @@ module.exports = function create(opts) {
   const gitUrl = isGithub ? `https://github.com/${git}` : git;
   const zipUrl = isGithub ? `https://github.com/${git}/archive/${branch}.zip` : zip;
   const id = new Buffer(git).toString('base64').substr(0, 6);
-  let cacheDir = opts.cacheDir || path.join(os.homedir(), '.git-cache', id);
+  let cacheDir = opts.cacheDir || path.join(os.homedir(), '.template-down', id);
 
   cacheDir = path.isAbsolute(cacheDir) ? cacheDir : path.resolve(cacheDir);
 
