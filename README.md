@@ -1,6 +1,6 @@
 # template-down
 
-It is useful for creating a template by git clone. It saved the template to local cached folder to avoid run `git clone` every time creating template. It could significantly improve the speed of installing template.
+It is useful for creating a template by git clone. It saved the template to local cached folder, and it will execute `git pull` and `cp` instead of `git clone` every time creating template. So it could significantly improve the speed of installing template.
 
 ## install
 
